@@ -17,10 +17,10 @@ oc new-project openshift-apache-php7 \
 Deploy (externally)
 
 ```sh
-oc new-app https://github.com/weepee-org/openshift-apache-php7.git --name apache-php7
+oc new-app https://github.com/c4tom/openshift-apache-php7.git --name apache-php7
 ```
 
-Deploy (weepee internally)
+Deploy (internally)
 add to Your buildconfig
 ```yaml
 spec:
@@ -29,7 +29,7 @@ spec:
       from:
         kind: ImageStreamTag
         name: php7-webserver:latest
-        namespace: weepee-registry
+        namespace: c4tom-registry
     type: Docker
 ```
 use in your Dockerfile
