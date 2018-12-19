@@ -9,7 +9,7 @@ You need oc (https://github.com/openshift/origin/releases) locally installed:
 create a new project (change to your whishes) or add this to your existing project
 
 ```sh
-oc new-project openshift-apache-php7 \
+oc new-project apache-php7 \
     --description="WebServer - Apache PHP7" \
     --display-name="Apache PHP7"
 ```
@@ -32,6 +32,7 @@ spec:
         namespace: c4tom-registry
     type: Docker
 ```
+
 use in your Dockerfile
 ```sh
 FROM weepee-registry/php7-webserver
