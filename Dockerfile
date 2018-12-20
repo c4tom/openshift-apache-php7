@@ -42,10 +42,10 @@ WORKDIR /app
 ENTRYPOINT ["/scripts/run.sh"]
 
 # Set labels used in OpenShift to describe the builder images
-LABEL io.k8s.description="Alpine linux based Apache PHP7 Container" \
+LABEL io.k8s.description="Alpine linux based Apache PHP7 WordPress 5.x Container" \
       io.k8s.display-name="alpine apache php7" \
       io.openshift.expose-services="8080:http" \
-      io.openshift.tags="builder,html,apache,php7" \
+      io.openshift.tags="builder,html,apache,php7,wordpress" \
       io.openshift.min-memory="1Gi" \
       io.openshift.min-cpu="1" \
       io.openshift.non-scalable="false"
