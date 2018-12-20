@@ -31,6 +31,7 @@ chmod -R 755 /scripts && chmod -R a+rw /etc/ssmtp && chmod a+rw /etc/passwd
 
 # Your app
 ADD app/index.php /app/index.php
+RUN ln -sf app/WordPress app/site
 
 # Exposed Port
 EXPOSE 8080
